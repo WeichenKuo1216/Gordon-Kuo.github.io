@@ -75,3 +75,13 @@ select,
 textarea {
   font-family: "Times New Roman", Times, serif;
 }
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
