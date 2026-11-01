@@ -52,7 +52,7 @@ nav a[aria-current="page"] {
     color: inherit;
   }
 }
-
+/* adding background color to lead*/
 .lead {
   background-color: #35302b;
   color: #e0c78f;
@@ -60,4 +60,18 @@ nav a[aria-current="page"] {
   padding: 18px 22px;
   border-left: 3px solid var(--accent);
   border-radius: 4px;
+}
+
+/* Times New Roman throughout the site */
+body,
+h1, h2, h3, h4, h5, h6,
+.wordmark,
+.lead,
+.portrait-placeholder > span,
+.project-number,
+button,
+input,
+select,
+textarea {
+  font-family: "Times New Roman", Times, serif;
 }
