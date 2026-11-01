@@ -112,3 +112,18 @@ textarea {
   max-height: 100%;
   object-fit: contain;
 }
+
+.affiliation-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
