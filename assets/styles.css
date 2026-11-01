@@ -52,3 +52,12 @@ nav a[aria-current="page"] {
     color: inherit;
   }
 }
+
+.lead {
+  background-color: #35302b;
+  color: #e0c78f;
+  font-style: italic;
+  padding: 18px 22px;
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+}
