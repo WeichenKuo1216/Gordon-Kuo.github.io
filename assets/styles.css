@@ -185,3 +185,87 @@ textarea {
   }
 }
 
+/* ===== Research Page Layout ===== */
+
+.section.research-item {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+  position: relative;
+}
+
+/* Left column */
+.research-images {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* Each research image */
+.research-figure {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: static;
+}
+
+.research-figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  position: static;
+}
+
+/* Source description */
+.research-figure figcaption {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #999;
+  overflow-wrap: anywhere;
+}
+
+/* Right column */
+.research-content {
+  min-width: 0;
+  position: relative;
+}
+
+.research-content .category {
+  margin-top: 0;
+}
+
+.research-content h2 {
+  margin: 8px 0 16px;
+  line-height: 1.4;
+}
+
+.research-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.research-content li {
+  margin-bottom: 12px;
+  line-height: 1.65;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .section.research-item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .research-images {
+    max-width: 320px;
+  }
+}
+
