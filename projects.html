@@ -85,7 +85,7 @@
         <div class="project-content">
           <p class="category">Transportation Optimization</p>
           <h2 id="bus-title">
-            School Bus Routing with Fairness Considerations
+            School Bus Routing Optimization
           </h2>
     
           <p class="project-summary">
@@ -103,9 +103,9 @@
             <div class="project-details-content">
               <ul>
                 <li>
-                  Formulated a multi-traveling salesman and vehicle
-                  routing problem incorporating vehicle capacity,
-                  route duration, and student travel times.
+                  Formulated a MILP to jointly determine school-bus routes, fleet size, and starting stops using a virtual-source 
+                  formulation for endogenous start selection, with capacity, fleet-cost, route-duration, and student in-vehicle-time 
+                  considerations.
                 </li>
                 <li>
                   Introduced fairness considerations to reduce
@@ -113,9 +113,9 @@
                   for differences in students' travel experiences.
                 </li>
                 <li>
-                  Developed an optimization objective integrating
-                  operational costs, service constraints, and
-                  fairness-related penalties.
+                  Implemented the model in Python/Gurobi with MTZ subtour-elimination and time-propagation constraints; verified 
+                  optimality on a 10-stop instance and evaluated a 115-stop network, where the solver time limit indicated scalability 
+                  limits of the exact formulation.
                 </li>
               </ul>
             </div>
