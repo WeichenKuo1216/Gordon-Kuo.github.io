@@ -293,7 +293,7 @@ textarea {
   font-weight: 500;
   color: #69c9ab;
 
-  padding: 6px 0;
+  padding: 4px 0;
 }
 
 /* Remove default browser arrow */
@@ -315,7 +315,7 @@ textarea {
 
 /* Expanded content */
 .research-details-content {
-  padding-top: 12px;
+  padding-top: 4px;
 }
 
 .research-details-content ul {
