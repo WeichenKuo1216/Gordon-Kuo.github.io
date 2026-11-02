@@ -347,3 +347,141 @@ textarea {
   display: inline;
 }
 
+
+
+/* ============================
+   Projects Page
+   ============================ */
+
+.section.project-item {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+
+  padding: 0 0 22px;
+  margin: 0 0 22px;
+
+  border-bottom: 1px solid rgba(150,150,150,0.2);
+}
+
+/* Image */
+.project-figure {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  position: static;
+}
+
+/* Image source */
+.project-figure figcaption {
+  margin-top: 5px;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: #999;
+  overflow-wrap: anywhere;
+}
+
+/* Text column */
+.project-content {
+  min-width: 0;
+  position: relative;
+}
+
+.project-content .category {
+  margin: 0 0 5px;
+}
+
+.project-content h2 {
+  margin: 0 0 7px;
+  line-height: 1.35;
+}
+
+.project-summary {
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Dropdown */
+.project-details {
+  margin-top: 5px;
+}
+
+.project-details summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  list-style: none;
+  padding: 2px 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #69c9ab;
+}
+
+.project-details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Arrow */
+.project-details summary::after {
+  content: "⌄";
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.project-details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Toggle labels */
+.project-details .label-open {
+  display: none;
+}
+
+.project-details[open] .label-closed {
+  display: none;
+}
+
+.project-details[open] .label-open {
+  display: inline;
+}
+
+/* Expanded content */
+.project-details-content {
+  padding-top: 7px;
+}
+
+.project-details-content ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.project-details-content li {
+  margin: 0 0 7px;
+  line-height: 1.55;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .section.project-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+  }
+
+  .project-figure {
+    max-width: 300px;
+  }
+}
+
