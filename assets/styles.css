@@ -189,8 +189,8 @@ textarea {
 
 .section.research-item {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  gap: 30px;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 20px;
   align-items: start;
   position: relative;
 }
@@ -217,7 +217,6 @@ textarea {
   width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 4px;
   position: static;
