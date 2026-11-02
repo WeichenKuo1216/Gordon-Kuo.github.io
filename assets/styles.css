@@ -268,3 +268,63 @@ textarea {
   }
 }
 
+
+/* Research summary */
+.research-summary {
+  margin: 12px 0;
+  line-height: 1.7;
+}
+
+/* Expandable description */
+.research-details {
+  margin-top: 12px;
+}
+
+/* Read more button */
+.research-details summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+  list-style: none;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #69c9ab;
+
+  padding: 6px 0;
+}
+
+/* Remove default browser arrow */
+.research-details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow */
+.research-details summary::after {
+  content: "⌄";
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate arrow when expanded */
+.research-details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Expanded content */
+.research-details-content {
+  padding-top: 12px;
+}
+
+.research-details-content ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.research-details-content li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
