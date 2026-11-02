@@ -271,13 +271,13 @@ textarea {
 
 /* Research summary */
 .research-summary {
-  margin: 12px 0;
+  margin: 6px 0;
   line-height: 1.7;
 }
 
 /* Expandable description */
 .research-details {
-  margin-top: 6px;
+  margin-top: 2px;
 }
 
 /* Read more button */
@@ -293,7 +293,7 @@ textarea {
   font-weight: 500;
   color: #69c9ab;
 
-  padding: 4px 0;
+  padding: 2px 0;
 }
 
 /* Remove default browser arrow */
@@ -315,7 +315,7 @@ textarea {
 
 /* Expanded content */
 .research-details-content {
-  padding-top: 4px;
+  padding-top: 2px;
 }
 
 .research-details-content ul {
