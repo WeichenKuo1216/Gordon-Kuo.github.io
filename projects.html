@@ -16,16 +16,261 @@
       <a class="wordmark" href="index.html" aria-label="Wei-Chen Kuo, home">W. C. (Gordon) Kuo<span aria-hidden="true"></span></a>
       <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html">Research</a><a href="resume.html">Resume</a><a href="projects.html" aria-current="page">Projects</a><a href="courses.html">Courses</a><a href="activities.html">Activities</a></nav>
     </header>
+    
     <main id="main">
-      <header class="page-title"><p class="eyebrow">Under Construction...</p><h1>Projects</h1><p class="muted">Selected applications of optimization and decision support.</p></header>
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading"><h2 id="projects-title">Selected projects</h2><span class="section-note">Models in practice</span></div>
-        <p class="editor-note">Project topics from my background; implementation details and links are being prepared.</p>
-        <article class="project"><span class="project-number" aria-hidden="true">01</span><div><h3>Automated guided vehicle routing</h3><p>Routing and coordination of material movement in manufacturing environments.</p><span class="tag">Routing · Manufacturing</span></div></article>
-        <article class="project"><span class="project-number" aria-hidden="true">02</span><div><h3>Manufacturing capacity planning</h3><p>Capacity allocation and planning decisions under production constraints.</p><span class="tag">Planning · Resource allocation</span></div></article>
-        <article class="project"><span class="project-number" aria-hidden="true">03</span><div><h3>CPBL bullpen decision support</h3><p>An application of operational decision-making to baseball bullpen management.</p><span class="tag">Sports analytics · Decision support</span></div></article>
+      <header class="page-title">
+        <h1>Projects</h1>
+      </header>
+    
+      <!-- 1. Hospital Triage -->
+      <section class="section project-item" aria-labelledby="hospital-title">
+    
+        <figure class="project-figure">
+          <img src="assets/images/hospital.jpg"
+               alt="Hospital triage optimization"
+               loading="lazy">
+          <figcaption>Source: Add image attribution</figcaption>
+        </figure>
+    
+        <div class="project-content">
+          <p class="category">Healthcare Operations</p>
+          <h2 id="hospital-title">Hospital Triage Optimization</h2>
+    
+          <p class="project-summary">
+            Investigating optimization-based approaches to improve
+            patient triage, healthcare resource allocation, and
+            operational decision-making in hospital systems.
+          </p>
+    
+          <details class="project-details">
+            <summary>
+              <span class="label-closed">Read more</span>
+              <span class="label-open">Show less</span>
+            </summary>
+    
+            <div class="project-details-content">
+              <ul>
+                <li>
+                  Investigating patient prioritization and resource
+                  allocation decisions in hospital triage operations.
+                </li>
+                <li>
+                  Exploring optimization formulations that account for
+                  operational constraints and healthcare service needs.
+                </li>
+                <li>
+                  Examining opportunities to improve resource utilization
+                  and patient flow through analytical decision support.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
       </section>
+    
+      <!-- 2. School Bus Routing -->
+      <section class="section project-item" aria-labelledby="bus-title">
+    
+        <figure class="project-figure">
+          <img src="assets/images/school-bus.jpg"
+               alt="School bus routing"
+               loading="lazy">
+          <figcaption>Source: Add image attribution</figcaption>
+        </figure>
+    
+        <div class="project-content">
+          <p class="category">Transportation Optimization</p>
+          <h2 id="bus-title">
+            School Bus Routing with Fairness Considerations
+          </h2>
+    
+          <p class="project-summary">
+            Developed a vehicle routing optimization model that
+            balances transportation efficiency with fairness in
+            students' travel times.
+          </p>
+    
+          <details class="project-details">
+            <summary>
+              <span class="label-closed">Read more</span>
+              <span class="label-open">Show less</span>
+            </summary>
+    
+            <div class="project-details-content">
+              <ul>
+                <li>
+                  Formulated a multi-traveling salesman and vehicle
+                  routing problem incorporating vehicle capacity,
+                  route duration, and student travel times.
+                </li>
+                <li>
+                  Introduced fairness considerations to reduce
+                  excessive in-vehicle travel times and account
+                  for differences in students' travel experiences.
+                </li>
+                <li>
+                  Developed an optimization objective integrating
+                  operational costs, service constraints, and
+                  fairness-related penalties.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+    
+      <!-- 3. Safety Audit Scheduling -->
+      <section class="section project-item" aria-labelledby="audit-title">
+    
+        <figure class="project-figure">
+          <img src="assets/images/safety-audit.jpg"
+               alt="Industrial safety audit scheduling"
+               loading="lazy">
+          <figcaption>Source: Add image attribution</figcaption>
+        </figure>
+    
+        <div class="project-content">
+          <p class="category">Workforce Scheduling</p>
+          <h2 id="audit-title">
+            Safety Audit Scheduling with Learning Effects
+          </h2>
+    
+          <p class="project-summary">
+            Developed a mixed-integer linear programming model
+            for workforce scheduling that incorporates employee
+            experience, task complexity, and learning effects.
+          </p>
+    
+          <details class="project-details">
+            <summary>
+              <span class="label-closed">Read more</span>
+              <span class="label-open">Show less</span>
+            </summary>
+    
+            <div class="project-details-content">
+              <ul>
+                <li>
+                  Modeled task processing times as a function of
+                  audit complexity and employee experience.
+                </li>
+                <li>
+                  Incorporated staffing requirements, experience
+                  thresholds, workload restrictions, and individual
+                  assignment limits.
+                </li>
+                <li>
+                  Introduced experience improvements through
+                  repeated task completion and solved scheduling
+                  instances using Gurobi.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+    
+      <!-- 4. AGV Routing -->
+      <section class="section project-item" aria-labelledby="agv-title">
+    
+        <figure class="project-figure">
+          <img src="assets/images/agv.jpg"
+               alt="Automated guided vehicle routing"
+               loading="lazy">
+          <figcaption>Source: Add image attribution</figcaption>
+        </figure>
+    
+        <div class="project-content">
+          <p class="category">Manufacturing Logistics</p>
+          <h2 id="agv-title">
+            Automated Guided Vehicle Routing Optimization
+          </h2>
+    
+          <p class="project-summary">
+            Investigated capacitated vehicle routing models and
+            heuristic algorithms for automated material
+            transportation in manufacturing environments.
+          </p>
+    
+          <details class="project-details">
+            <summary>
+              <span class="label-closed">Read more</span>
+              <span class="label-open">Show less</span>
+            </summary>
+    
+            <div class="project-details-content">
+              <ul>
+                <li>
+                  Formulated a capacitated vehicle routing problem
+                  with depots, machine demand locations, and
+                  vehicle capacity constraints.
+                </li>
+                <li>
+                  Implemented a mixed-integer programming approach
+                  for smaller instances using LINGO.
+                </li>
+                <li>
+                  Explored nearest-neighbor heuristics and
+                  large-neighborhood search approaches for
+                  larger routing instances.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+    
+      <!-- 5. CPBL Bullpen -->
+      <section class="section project-item" aria-labelledby="cpbl-title">
+    
+        <figure class="project-figure">
+          <img src="assets/images/cpbl.jpg"
+               alt="Baseball pitching decision support"
+               loading="lazy">
+          <figcaption>Source: Add image attribution</figcaption>
+        </figure>
+    
+        <div class="project-content">
+          <p class="category">Sports Analytics</p>
+          <h2 id="cpbl-title">
+            CPBL Bullpen Decision Support
+          </h2>
+    
+          <p class="project-summary">
+            Developed a machine-learning decision-support
+            framework to evaluate pitching substitution
+            decisions using professional baseball data.
+          </p>
+    
+          <details class="project-details">
+            <summary>
+              <span class="label-closed">Read more</span>
+              <span class="label-open">Show less</span>
+            </summary>
+    
+            <div class="project-details-content">
+              <ul>
+                <li>
+                  Processed pitch-by-pitch data from 360
+                  Chinese Professional Baseball League games.
+                </li>
+                <li>
+                  Developed gradient-boosted decision tree
+                  models to estimate game outcomes under
+                  pitching-change and no-change scenarios.
+                </li>
+                <li>
+                  Compared predicted win probabilities to
+                  generate decision-support recommendations
+                  for bullpen management.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+    
     </main>
+
     <footer><span>© 2026 Wei-Chen (Gordon) Kuo</span><a href="#main">Back to top ↑</a></footer>
   </div>
 </body>
