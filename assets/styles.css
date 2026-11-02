@@ -328,3 +328,22 @@ textarea {
   line-height: 1.7;
 }
 
+
+/* Collapsed: show Read more */
+.research-details .label-closed {
+  display: inline;
+}
+
+.research-details .label-open {
+  display: none;
+}
+
+/* Expanded: show Show less */
+.research-details[open] .label-closed {
+  display: none;
+}
+
+.research-details[open] .label-open {
+  display: inline;
+}
+
