@@ -25,19 +25,19 @@
   --font-page-title: 23px;     /* Research / Projects page titles */
   --font-section-title: 20px;  /* Homepage section headings */
   --font-entry-title: 17px;    /* Research / Project item titles */
-  --font-body: 12px;
-  --font-lead: 15px;
-  --font-summary: 12px;
-  --font-description: 12px;
-  --font-category: 10px;
-  --font-nav: 14px;
-  --font-dropdown: 14px;
-  --font-caption: 12px;
-  --font-footer: 12px;
-  --font-wordmark: 13px;
-  --font-contact: 12px;
-  --font-profile: 12px;
-  --font-small: 11px;
+  --font-body: 12px; 
+  --font-lead: 15px; /* Highlighted introductory statement:*/
+  --font-summary: 12px; /* Short summaries displayed below research and project titles before expanding */
+  --font-description: 12px; /* Expanded descriptions after clicking Read more / Show less. Also used for experience descriptions */
+  --font-category: 10px; /* Uppercase labels above entries: HEALTHCARE OPERATIONS, TRANSPORTATION OPTIMIZATION, UNDER CONSTRUCTION, etc. */
+  --font-nav: 14px; /* Navigation links at the top: About, Research, Projects, CV, Contact */
+  --font-dropdown: 11px; /* Clickable Read more / Show less text on Research and Projects pages */
+  --font-caption: 11px; /* Captions below research/project figures, including image sources and descriptions */
+  --font-footer: 12px; /* Copyright notice and footer links at the bottom of the website */
+  --font-wordmark: 15px; /* Website name/logo in the top-left corner */
+  --font-contact: 12px; /* Contact information: Email, GitHub, LinkedIn, etc. */
+  --font-profile: 12px; /* Text near your portrait: Affiliation, university, position, etc. */
+  --font-small: 11px; /* Small notes, tags, annotations, section notes and miscellaneous labels */
 
   /* Spacing — change layout density here */
   --page-width: 960px;
