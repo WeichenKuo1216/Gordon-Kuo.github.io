@@ -7,17 +7,17 @@
 
   /* Colors */
    --paper: #101D19;          /* Main website background */
-   --ink: #E9E6DA;            /* Main text - warm ivory */
-   --muted: #A5B5AA;          /* Secondary text */
-   --accent: #78B59B;         /* Links, navigation, highlights */
-   --accent-hover: #A6CFB5;   /* Links when hovered */
-   --line: #30493D;           /* Horizontal divider lines */
-   --dropdown-color: #78B59B; /* Read more / Show less */
+   --ink: #B8B2A5;            /* Main text - warm ivory */
+   --muted: #98A69B;          /* Secondary text */
+   --accent: #789F89;         /* Links, navigation, highlights */
+   --accent-hover: #A0B8A4;   /* Links when hovered */
+   --line: #304137;           /* Horizontal divider lines */
+   --dropdown-color: #789F89; /* Read more / Show less */
    --gold: #B6A076;
    
    /* Introduction highlight box */
    --lead-background: #164633;
-   --lead-text: #F0EDE3;
+   --lead-text: #A8B8AA;
    --lead-border: #B6A076;
 
   /* Typography — change sizes here */
