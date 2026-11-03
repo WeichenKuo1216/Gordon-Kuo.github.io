@@ -1,3 +1,29 @@
+/* ==================================
+   GLOBAL TYPOGRAPHY SETTINGS
+   Change all font sizes here
+   ================================== */
+
+:root {
+  /* Main headings */
+  --font-name: 38px;
+  --font-page-title: 20px;
+  --font-section-title: 20px;
+  --font-entry-title: 19px;
+
+  /* General text */
+  --font-body: 16px;
+  --font-lead: 20px;
+  --font-summary: 16px;
+  --font-description: 15px;
+
+  /* Smaller text */
+  --font-category: 12px;
+  --font-nav: 14px;
+  --font-dropdown: 14px;
+  --font-caption: 12px;
+  --font-footer: 12px;
+}
+
 :root {
   color-scheme: dark;
   --paper: #292624;
@@ -485,8 +511,99 @@ textarea {
   }
 }
 
-/* Section headings */
-h2 {
-  font-size: 20px;
+/* ==================================
+   GLOBAL FONT SIZE APPLICATION
+   ================================== */
+
+/* General */
+body {
+  font-size: var(--font-body);
+}
+
+h1 {
+  font-size: var(--font-name);
+}
+
+h2,
+.section-heading h2 {
+  font-size: var(--font-section-title);
+}
+
+h3 {
+  font-size: var(--font-entry-title);
+}
+
+/* Header and navigation */
+.wordmark {
+  font-size: var(--font-entry-title);
+}
+
+nav a {
+  font-size: var(--font-nav);
+}
+
+/* Page heading: Research, Projects, etc. */
+.page-title h1 {
+  font-size: var(--font-page-title);
+}
+
+/* Introduction */
+.lead {
+  font-size: var(--font-lead);
+}
+
+.preferred-name {
+  font-size: var(--font-body);
+}
+
+/* Research and project entries */
+.research-content h2,
+.project-content h2 {
+  font-size: var(--font-entry-title);
+}
+
+.research-summary,
+.project-summary {
+  font-size: var(--font-summary);
+}
+
+.research-details-content,
+.project-details-content {
+  font-size: var(--font-description);
+}
+
+/* Category labels */
+.category,
+.eyebrow {
+  font-size: var(--font-category);
+}
+
+/* Dropdown buttons */
+.research-details summary,
+.project-details summary {
+  font-size: var(--font-dropdown);
+}
+
+/* Figure captions */
+.research-figure figcaption,
+.project-figure figcaption {
+  font-size: var(--font-caption);
+}
+
+/* Experience */
+.experience-row p {
+  font-size: var(--font-description);
+}
+
+/* Contact */
+.contact-list dt,
+.contact-list dd {
+  font-size: var(--font-description);
+}
+
+/* Footer */
+footer {
+  font-size: var(--font-footer);
+}
 }
 
