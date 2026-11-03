@@ -23,13 +23,13 @@
   /* Typography — change sizes here */
   --font-name: 38px;           /* Homepage main name */
   --font-page-title: 23px;     /* Research / Projects page titles */
-  --font-section-title: 15px;  /* Homepage section headings */
-  --font-entry-title: 15px;    /* Research / Project item titles */
+  --font-section-title: 20px;  /* Homepage section headings */
+  --font-entry-title: 17px;    /* Research / Project item titles */
   --font-body: 12px;
   --font-lead: 15px;
   --font-summary: 12px;
   --font-description: 12px;
-  --font-category: 12px;
+  --font-category: 10px;
   --font-nav: 14px;
   --font-dropdown: 14px;
   --font-caption: 12px;
