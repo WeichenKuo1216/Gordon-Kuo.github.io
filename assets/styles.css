@@ -39,10 +39,10 @@
   /* Spacing — change layout density here */
   --page-width: 960px;
   --page-side-padding: 40px;
-  --header-padding-y: 30px;
+  --header-padding-y: 15px;
   --section-padding-top: 15px;
   --section-padding-bottom: 15px;
-  --section-heading-gap: 16px;
+  --section-heading-gap: 15px;
   --page-title-padding-top: 48px;
   --page-title-padding-bottom: 30px;
   --intro-padding-top: 65px;
