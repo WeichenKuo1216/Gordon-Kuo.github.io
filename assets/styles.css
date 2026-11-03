@@ -6,16 +6,18 @@
   color-scheme: dark;
 
   /* Colors */
-  --paper: #292624;
-  --ink: #e3e7e5;
-  --muted: #aebbb4;
-  --accent: #80b89a;
-  --accent-hover: #c6ddbf;
-  --line: #315b47;
-  --dropdown-color: #69c9ab;
-  --lead-background: #173c2d;
-  --lead-text: #d5e5dc;
-  --lead-border: #438664;
+   --paper: #101D19;          /* Main website background */
+   --ink: #E9E6DA;            /* Main text - warm ivory */
+   --muted: #A5B5AA;          /* Secondary text */
+   --accent: #78B59B;         /* Links, navigation, highlights */
+   --accent-hover: #A6CFB5;   /* Links when hovered */
+   --line: #30493D;           /* Horizontal divider lines */
+   --dropdown-color: #78B59B; /* Read more / Show less */
+   
+   /* Introduction highlight box */
+   --lead-background: #192C25;
+   --lead-text: #E9E6DA;
+   --lead-border: #147D60;
 
   /* Typography — change sizes here */
   --font-name: 38px;           /* Homepage main name */
@@ -446,4 +448,37 @@ footer a { text-decoration: none; }
   details { display: block; }
   article { break-inside: avoid; }
   a, a:hover { color: inherit; }
+}
+
+
+/*added styl*/
+/* Subtle green surfaces */
+.lead {
+  background-color: var(--surface);
+  color: var(--ink);
+  border-left: 3px solid var(--accent-deep);
+}
+
+/* Refined link interaction */
+a:hover,
+.research-details summary:hover,
+.project-details summary:hover {
+  color: var(--gold);
+}
+
+/* Emerald dropdown links */
+.research-details summary,
+.project-details summary {
+  color: var(--accent);
+}
+
+/* Fine section dividers */
+.section {
+  border-top: 1px solid var(--line);
+}
+
+/* Antique gold category labels */
+.category,
+.eyebrow {
+  color: var(--gold);
 }
