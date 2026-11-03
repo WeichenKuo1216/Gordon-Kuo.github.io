@@ -58,6 +58,13 @@
   --project-image-width: 210px;
   --project-column-gap: 22px;
   --project-item-gap: 22px;
+
+   /* Courses layout */
+   --courses-left-width: 230px;
+   --courses-column-gap: 45px;
+   --university-logo-width: 110px;
+   --course-group-gap: 25px;
+   --course-row-gap: 8px;
 }
 
 /* ==========================================================
@@ -478,3 +485,94 @@ a:hover,
 .eyebrow {
   color: var(--gold);
 }
+
+
+/* ============================
+   COURSES — UNIVERSITY SHEET
+   ============================ */
+
+.courses-layout {
+  display: grid;
+  grid-template-columns:
+    var(--courses-left-width)
+    minmax(0, 1fr);
+  gap: var(--courses-column-gap);
+  align-items: start;
+}
+
+/* University identity */
+.courses-university {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.university-logo {
+  display: block;
+  width: var(--university-logo-width);
+  height: auto;
+  margin: 0 auto 15px;
+  object-fit: contain;
+}
+
+.courses-university h2 {
+  font-size: var(--font-entry-title);
+  margin: 0 0 5px;
+}
+
+.courses-university p {
+  font-size: var(--font-small);
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Right column */
+.courses-catalog {
+  min-width: 0;
+}
+
+.course-group {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-bottom: var(--course-group-gap);
+}
+
+.course-group h2 {
+  font-size: var(--font-section-title);
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+/* Course rows */
+.course-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: var(--course-row-gap);
+  font-size: var(--font-body);
+}
+
+.course-code {
+  color: var(--muted);
+  font-size: var(--font-small);
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .courses-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .courses-university {
+    padding-top: 0;
+  }
+
+  .university-logo {
+    width: 75px;
+  }
+}
+
+
+
