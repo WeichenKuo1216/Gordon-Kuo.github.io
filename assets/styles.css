@@ -453,12 +453,7 @@ footer a { text-decoration: none; }
 
 
 /*added styl*/
-/* Subtle green surfaces */
-.lead {
-  background-color: var(--surface);
-  color: var(--ink);
-  border-left: 3px solid var(--accent-deep);
-}
+
 
 /* Refined link interaction */
 a:hover,
