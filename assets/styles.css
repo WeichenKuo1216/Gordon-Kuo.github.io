@@ -7,14 +7,14 @@
   /* Main headings */
   --font-name: 38px;
   --font-page-title: 20px;
-  --font-section-title: 20px;
-  --font-entry-title: 19px;
+  --font-section-title: 15px;
+  --font-entry-title: 13px;
 
   /* General text */
-  --font-body: 16px;
-  --font-lead: 20px;
-  --font-summary: 16px;
-  --font-description: 15px;
+  --font-body: 12px;
+  --font-lead: 15px;
+  --font-summary: 12px;
+  --font-description: 12px;
 
   /* Smaller text */
   --font-category: 12px;
