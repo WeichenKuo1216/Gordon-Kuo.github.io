@@ -576,3 +576,91 @@ a:hover,
 
 
 
+/* ==================================
+   RESUME PAGE
+   ================================== */
+
+:root {
+  --resume-row-gap: 18px;
+  --resume-date-width: 145px;
+  --resume-title-size: 15px;
+  --resume-role-size: 13px;
+  --resume-detail-size: 12px;
+}
+
+/* Section headings */
+.resume-section h2 {
+  font-size: var(--font-section-title);
+  margin-bottom: 12px;
+}
+
+/* Resume entries */
+.resume-entry {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    var(--resume-date-width);
+  gap: 20px;
+  align-items: start;
+  padding: var(--resume-row-gap) 0;
+}
+
+.resume-entry + .resume-entry {
+  border-top: 1px solid var(--line);
+}
+
+.resume-entry h3 {
+  font-size: var(--resume-title-size);
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+
+.resume-role {
+  font-size: var(--resume-role-size);
+  color: var(--accent);
+  margin: 0 0 5px;
+}
+
+.resume-detail {
+  font-size: var(--resume-detail-size);
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 4px;
+}
+
+.resume-date {
+  font-size: var(--font-small);
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Technical skills */
+.resume-skills p {
+  font-size: var(--resume-detail-size);
+  color: var(--muted);
+  margin: 8px 0;
+}
+
+.resume-skills strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .resume-entry {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .resume-date {
+    text-align: left;
+    white-space: normal;
+  }
+}
+
+
+
+
