@@ -40,13 +40,13 @@
   --page-width: 960px;
   --page-side-padding: 40px;
   --header-padding-y: 15px;
-  --section-padding-top: 0px;
-  --section-padding-bottom: 15px;
+  --section-padding-top: 2px;
+  --section-padding-bottom: 2px;
   --section-heading-gap: 15px;
-  --page-title-padding-top: 48px;
-  --page-title-padding-bottom: 30px;
+  --page-title-padding-top: 15px;
+  --page-title-padding-bottom: 15px;
   --intro-padding-top: 65px;
-  --intro-padding-bottom: 44px;
+  --intro-padding-bottom: 15px;
   --intro-column-gap: 68px;
   --paragraph-gap: 12px;
   --research-image-width: 300px;
