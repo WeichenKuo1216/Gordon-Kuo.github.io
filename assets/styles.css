@@ -1,3 +1,99 @@
+/* ==========================================================
+   PERSONAL WEBSITE — STYLE SETTINGS
+   Edit values in :root to control the whole site.
+   ========================================================== */
+:root {
+  color-scheme: dark;
+
+  /* Colors */
+  --paper: #292624;
+  --ink: #e3e7e5;
+  --muted: #aebbb4;
+  --accent: #80b89a;
+  --accent-hover: #c6ddbf;
+  --line: #315b47;
+  --dropdown-color: #69c9ab;
+  --lead-background: #173c2d;
+  --lead-text: #d5e5dc;
+  --lead-border: #438664;
+
+  /* Typography — change sizes here */
+  --font-name: 38px;           /* Homepage main name */
+  --font-page-title: 23px;     /* Research / Projects page titles */
+  --font-section-title: 15px;  /* Homepage section headings */
+  --font-entry-title: 13px;    /* Research / Project item titles */
+  --font-body: 12px;
+  --font-lead: 15px;
+  --font-summary: 12px;
+  --font-description: 12px;
+  --font-category: 12px;
+  --font-nav: 14px;
+  --font-dropdown: 14px;
+  --font-caption: 12px;
+  --font-footer: 12px;
+  --font-wordmark: 13px;
+  --font-contact: 12px;
+  --font-profile: 12px;
+  --font-small: 11px;
+
+  /* Spacing — change layout density here */
+  --page-width: 960px;
+  --page-side-padding: 40px;
+  --header-padding-y: 30px;
+  --section-padding-top: 15px;
+  --section-padding-bottom: 15px;
+  --section-heading-gap: 16px;
+  --page-title-padding-top: 48px;
+  --page-title-padding-bottom: 30px;
+  --intro-padding-top: 65px;
+  --intro-padding-bottom: 44px;
+  --intro-column-gap: 68px;
+  --paragraph-gap: 12px;
+  --research-image-width: 300px;
+  --research-column-gap: 20px;
+  --research-item-gap: 48px;
+  --project-image-width: 210px;
+  --project-column-gap: 22px;
+  --project-item-gap: 22px;
+}
+
+/* ==========================================================
+   1. RESET / GLOBAL TEXT
+   ========================================================== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Times New Roman", Times, serif;
+  font-size: var(--font-body);
+  line-height: 1.8;
+}
+button, input, select, textarea { font-family: inherit; }
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+a:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+p { margin: var(--paragraph-gap) 0; }
+h1, h2, h3 { font-weight: 400; line-height: 1.3; }
+h1 { font-size: var(--font-name); letter-spacing: -.035em; margin: 0; }
+h2 {
+  font-size: var(--font-section-title);
+  margin: 0 0 var(--section-heading-gap);
+  letter-spacing: -.02em;
+}
+h3 { font-size: var(--font-entry-title); font-weight: 600; margin: 0 0 5px; }
+.muted, .section-note { color: var(--muted); }
+.category, .eyebrow {
+  font-size: var(--font-category);
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 600;
@@ -158,3 +254,196 @@ nav a[aria-current="page"] { text-decoration: underline; font-weight: 600; }
   margin: 0;
   color: var(--muted);
   font-size: var(--font-contact);
+  overflow-wrap: anywhere;
+}
+footer {
+  border-top: 1px solid var(--line);
+  padding: 23px 0 35px;
+  font-size: var(--font-footer);
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+footer a { text-decoration: none; }
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--paper);
+  padding: 8px;
+  z-index: 2;
+}
+.skip-link:focus { top: 8px; }
+
+/* ==========================================================
+   5. RESEARCH PAGE
+   ========================================================== */
+.research-item {
+  display: grid;
+  grid-template-columns: var(--research-image-width) minmax(0, 1fr);
+  gap: var(--research-column-gap);
+  align-items: start;
+  margin-bottom: var(--research-item-gap);
+}
+.research-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+.research-images { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.research-figure { display: block; margin: 0; padding: 0; width: 100%; }
+.research-figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.research-figure figcaption {
+  margin-top: 6px;
+  font-size: var(--font-caption);
+  line-height: 1.5;
+  color: #999;
+  overflow-wrap: anywhere;
+}
+.research-content { min-width: 0; position: relative; }
+.research-content .category { margin-top: 0; }
+.research-content h2 {
+  font-size: var(--font-entry-title);
+  margin: 8px 0 16px;
+  line-height: 1.4;
+}
+.research-content ul { margin: 0; padding-left: 20px; }
+.research-content li { margin-bottom: 12px; line-height: 1.65; }
+.research-summary { font-size: var(--font-summary); margin: 6px 0; line-height: 1.7; }
+.research-details { margin-top: 2px; }
+.research-details-content { font-size: var(--font-description); padding-top: 2px; }
+.research-details-content ul { padding-left: 20px; margin: 0; }
+.research-details-content li { margin-bottom: 12px; line-height: 1.7; }
+
+/* ==========================================================
+   6. PROJECTS PAGE
+   ========================================================== */
+.section.project-item {
+  display: grid;
+  grid-template-columns: var(--project-image-width) minmax(0, 1fr);
+  gap: var(--project-column-gap);
+  align-items: start;
+  padding: 0 0 var(--project-item-gap);
+  margin: 0 0 var(--project-item-gap);
+  border-bottom: 1px solid rgba(150, 150, 150, .2);
+}
+.project-figure { margin: 0; padding: 0; min-width: 0; }
+.project-figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.project-figure figcaption {
+  margin-top: 5px;
+  font-size: var(--font-caption);
+  line-height: 1.4;
+  color: #999;
+  overflow-wrap: anywhere;
+}
+.project-content { min-width: 0; position: relative; }
+.project-content .category { margin: 0 0 5px; }
+.project-content h2 {
+  font-size: var(--font-entry-title);
+  margin: 0 0 7px;
+  line-height: 1.35;
+}
+.project-summary { font-size: var(--font-summary); margin: 0; line-height: 1.55; }
+.project-details { margin-top: 5px; }
+.project-details-content { font-size: var(--font-description); padding-top: 7px; }
+.project-details-content ul { margin: 0; padding-left: 18px; }
+.project-details-content li { margin: 0 0 7px; line-height: 1.55; }
+
+/* ==========================================================
+   7. SHARED RESEARCH / PROJECT DROPDOWNS
+   ========================================================== */
+.research-details summary, .project-details summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  list-style: none;
+  padding: 2px 0;
+  font-size: var(--font-dropdown);
+  font-weight: 500;
+  color: var(--dropdown-color);
+}
+.project-details summary { gap: 6px; }
+.research-details summary::-webkit-details-marker,
+.project-details summary::-webkit-details-marker { display: none; }
+.research-details summary::after, .project-details summary::after {
+  content: "⌄";
+  font-size: 1.2em;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+.research-details[open] summary::after,
+.project-details[open] summary::after { transform: rotate(180deg); }
+.research-details .label-open, .project-details .label-open { display: none; }
+.research-details[open] .label-closed,
+.project-details[open] .label-closed { display: none; }
+.research-details[open] .label-open,
+.project-details[open] .label-open { display: inline; }
+
+/* ==========================================================
+   8. MOBILE LAYOUT
+   ========================================================== */
+@media (max-width: 700px) {
+  :root {
+    --page-side-padding: 24px;
+    --header-padding-y: 22px;
+    --intro-padding-top: 36px;
+    --intro-padding-bottom: 36px;
+    --intro-column-gap: 24px;
+    --research-column-gap: 20px;
+    --project-column-gap: 12px;
+    --project-item-gap: 18px;
+  }
+  .site-header { align-items: flex-start; flex-direction: column; gap: 13px; }
+  nav { gap: 22px; }
+  .intro { grid-template-columns: minmax(0, 1fr); }
+  .profile { padding-top: 0; max-width: 190px; }
+  .portrait-placeholder { aspect-ratio: 1; }
+  .desktop-break { display: none; }
+  .section-heading { align-items: flex-start; }
+  .section-note { font-size: var(--font-small); }
+  .experience-row { flex-direction: column; gap: 2px; }
+  .contact-list > div { grid-template-columns: 110px minmax(0, 1fr); }
+  .project { gap: 15px; }
+  .research-item, .section.research-item, .section.project-item { grid-template-columns: 1fr; }
+  .research-images, .research-image { max-width: 320px; }
+  .project-figure { max-width: 300px; }
+  .section.project-item { padding-bottom: var(--project-item-gap); }
+}
+
+/* ==========================================================
+   9. ACCESSIBILITY / PRINT
+   ========================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .research-details summary::after, .project-details summary::after { transition: none; }
+}
+@media print {
+  body { background: #fff; color: #252c30; font-size: 11pt; }
+  .page { max-width: none; padding: 0; }
+  .site-header nav, .portrait-placeholder, footer a, .skip-link { display: none; }
+  .intro { grid-template-columns: 1fr; padding: 20px 0; }
+  .profile { padding: 0; }
+  .section { padding: 16px 0; }
+  details { display: block; }
+  article { break-inside: avoid; }
+  a, a:hover { color: inherit; }
+}
