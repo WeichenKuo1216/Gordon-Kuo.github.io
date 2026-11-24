@@ -17,7 +17,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font: 1rem/1.65 system-ui, sans-serif;
+  font: 1rem/1.65 "Luxurious Roman", Georgia, serif;
 }
 
 a {
