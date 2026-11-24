@@ -1,672 +1,202 @@
-/* ==========================================================
-   PERSONAL WEBSITE — STYLE SETTINGS
-   Edit values in :root to control the whole site.
-   ========================================================== */
 :root {
-   color-scheme: light;
+  color-scheme: light;
 
-  /* Color palette */
-  --paper: #ffffff;
-  --ink: #222222;
-  --muted: #666666;
-  --accent: #222222;
-  --accent-hover: #777777;
-  --line: #dddddd;
-
-  /* Dropdown */
-  --dropdown-color: #555555;
-
-  /* Introduction */
-  --lead-background: #ffffff;
-  --lead-text: #333333;
-  --lead-border: #dddddd;
-   
-   /* Introduction highlight box 
-   --lead-background: #164633;
-   --lead-text: #A8B8AA;
-   --lead-border: #B6A076;*/
-
-  /* Typography — change sizes here */
-  --font-name: 38px;           /* Homepage main name */
-  --font-page-title: 23px;     /* Research / Projects page titles */
-  --font-section-title: 20px;  /* Homepage section headings */
-  --font-entry-title: 17px;    /* Research / Project item titles */
-  --font-body: 12px; 
-  --font-lead: 15px; /* Highlighted introductory statement:*/
-  --font-summary: 12px; /* Short summaries displayed below research and project titles before expanding */
-  --font-description: 12px; /* Expanded descriptions after clicking Read more / Show less. Also used for experience descriptions */
-  --font-category: 10px; /* Uppercase labels above entries: HEALTHCARE OPERATIONS, TRANSPORTATION OPTIMIZATION, UNDER CONSTRUCTION, etc. */
-  --font-nav: 14px; /* Navigation links at the top: About, Research, Projects, CV, Contact */
-  --font-dropdown: 11px; /* Clickable Read more / Show less text on Research and Projects pages */
-  --font-caption: 11px; /* Captions below research/project figures, including image sources and descriptions */
-  --font-footer: 12px; /* Copyright notice and footer links at the bottom of the website */
-  --font-wordmark: 15px; /* Website name/logo in the top-left corner */
-  --font-contact: 12px; /* Contact information: Email, GitHub, LinkedIn, etc. */
-  --font-profile: 12px; /* Text near your portrait: Affiliation, university, position, etc. */
-  --font-small: 11px; /* Small notes, tags, annotations, section notes and miscellaneous labels */
-
-  /* Spacing — change layout density here */
-  --page-width: 960px;
-  --page-side-padding: 40px;
-  --header-padding-y: 15px;
-  --section-padding-top: 2px;
-  --section-padding-bottom: 2px;
-  --section-heading-gap: 15px;
-  --page-title-padding-top: 15px;
-  --page-title-padding-bottom: 15px;
-  --intro-padding-top: 65px;
-  --intro-padding-bottom: 15px;
-  --intro-column-gap: 68px;
-  --paragraph-gap: 12px;
-  --research-image-width: 300px;
-  --research-column-gap: 20px;
-  --research-item-gap: 48px;
-  --project-image-width: 210px;
-  --project-column-gap: 22px;
-  --project-item-gap: 22px;
-
-   /* Courses layout */
-   --courses-left-width: 230px;
-   --courses-column-gap: 45px;
-   --university-logo-width: 110px;
-   --course-group-gap: 25px;
-   --course-row-gap: 8px;
+  /* Customize the site palette here. */
+  --background: #fff;
+  --surface: #f5f5f5;
+  --text: #171717;
+  --muted: #565656;
+  --accent: #000;
+  --border: #d7d7d7;
 }
 
-/* ==========================================================
-   1. RESET / GLOBAL TEXT
-   ========================================================== */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+
+html { scroll-padding-top: 1.5rem; }
+
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "Times New Roman", Times, serif;
-  font-size: var(--font-body);
-  line-height: 1.8;
+  background: var(--background);
+  color: var(--text);
+  font: 1rem/1.65 system-ui, sans-serif;
 }
-button, input, select, textarea { font-family: inherit; }
+
 a {
   color: var(--accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+  text-underline-offset: .22em;
 }
-a:hover { color: var(--accent-hover); text-decoration: underline; }
-a:focus-visible, summary:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 5px;
-}
-p { margin: var(--paragraph-gap) 0; }
-h1, h2, h3 { font-weight: 400; line-height: 1.3; }
-h1 { font-size: var(--font-name); letter-spacing: -.035em; margin: 0; }
-h2 {
-  font-size: var(--font-section-title);
-  margin: 0 0 var(--section-heading-gap);
-  letter-spacing: -.02em;
-}
-h3 { font-size: var(--font-entry-title); font-weight: 600; margin: 0 0 5px; }
-.muted, .section-note { color: var(--muted); }
-.category, .eyebrow {
-  font-size: var(--font-category);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 600;
-}
-.category { margin: 0 0 6px; }
-.eyebrow { margin: 0 0 16px; }
 
-/* ==========================================================
-   2. SHARED PAGE STRUCTURE / HEADER
-   ========================================================== */
-.page {
-  max-width: var(--page-width);
-  padding: 0 var(--page-side-padding);
-  margin: auto;
+a:hover { color: var(--muted); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
-.site-header {
+
+img { display: block; max-width: 100%; height: auto; }
+
+h1, h2, h3 { line-height: 1.15; }
+h1, h2, h3, p, figure { margin: 0; }
+h1 {
+  font-size: clamp(3rem, 8.1vw, 7rem);
+  font-weight: 600;
+  line-height: .99;
+  letter-spacing: -.075em;
+  overflow-wrap: anywhere;
+}
+h2 { font-size: 1.45rem; letter-spacing: -.025em; }
+h3 { font-size: 1.125rem; }
+p + p { margin-top: .9rem; }
+
+.page { max-width: 94rem; padding-inline: clamp(1.25rem, 5.7vw, 5.25rem); margin-inline: auto; }
+
+.site-header, footer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: var(--header-padding-y) 0;
-  border-bottom: 1px solid var(--line);
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem 2rem;
+  padding-block: 1.5rem;
 }
-.wordmark {
-  font-size: var(--font-wordmark);
-  color: var(--ink);
+
+.site-header { border-bottom: 1px solid var(--accent); }
+.wordmark { font-size: 1.5rem; font-weight: 650; text-decoration: none; letter-spacing: -.035em; }
+nav { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem clamp(1rem, 2.4vw, 2.25rem); }
+nav a { color: var(--text); text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: var(--accent); text-decoration: underline; }
+.button, nav .button {
+  display: inline-block;
+  padding: .65rem 1.3rem;
+  border: 1px solid var(--accent);
+  border-radius: 2rem;
+  background: var(--accent);
+  color: var(--background);
   text-decoration: none;
 }
-.wordmark span { color: var(--accent); }
-nav { display: flex; gap: 25px; flex-wrap: wrap; }
-nav a { font-size: var(--font-nav); color: var(--muted); text-decoration: none; }
-nav a:hover, nav a[aria-current="page"] { color: var(--accent); }
-nav a[aria-current="page"] { text-decoration: underline; font-weight: 600; }
-.page-title {
-  padding: var(--page-title-padding-top) 0 var(--page-title-padding-bottom);
-}
-.page-title h1 { font-size: var(--font-page-title); margin-bottom: 14px; }
-.section {
-  border-top: 1px solid var(--line);
-  padding: var(--section-padding-top) 0 var(--section-padding-bottom);
-  scroll-margin-top: 15px;
-}
-.section-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 20px;
-}
-.section-note, .editor-note { font-size: var(--font-description); }
-.editor-note { color: var(--muted); max-width: 670px; }
-
-/* ==========================================================
-   3. HOMEPAGE INTRO / PROFILE
-   ========================================================== */
-.intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 210px;
-  gap: var(--intro-column-gap);
-  padding: var(--intro-padding-top) 0 var(--intro-padding-bottom);
-}
-.preferred-name {
-  color: var(--muted);
-  font-size: var(--font-body);
-  margin: 5px 0 24px;
-}
-.lead {
-  font-size: var(--font-lead);
-  line-height: 1.5;
-  margin-bottom: 20px;
-  background: var(--lead-background);
-  color: var(--lead-text);
-  font-style: italic;
-  padding: 18px 22px;
-  border-left: 3px solid var(--lead-border);
-  border-radius: 4px;
-}
-.intro-links {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 24px;
-  font-size: var(--font-nav);
-}
-.intro-links a { text-decoration: none; }
-.profile { padding-top: 30px; font-size: var(--font-profile); line-height: 1.6; }
-.profile p { margin: 16px 0 2px; }
-.portrait-placeholder {
-  aspect-ratio: 4 / 5;
-  background: #30352e;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--line);
-}
-.portrait-placeholder > span { font-size: 52px; color: var(--accent); }
-.portrait-placeholder small { margin-top: 16px; color: var(--muted); font-size: var(--font-small); }
-.profile-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-}
-.affiliation-logos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin-top: 18px;
-}
-.affiliation-logos a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 50px;
-  padding: 6px;
-  background: #f5f5f0;
-  border-radius: 2px;
-}
-.affiliation-logos img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
-.logo-row { display: flex; justify-content: center; align-items: center; gap: 12px; }
-
-/* ==========================================================
-   4. HOMEPAGE ENTRIES / EXPERIENCE / CONTACT
-   ========================================================== */
-.entry { padding: 20px 0 8px; max-width: 730px; }
-.entry p { margin: 6px 0; }
-.entry details { margin-top: 8px; font-size: var(--font-description); }
-.entry summary { color: var(--accent); cursor: pointer; width: fit-content; }
-.entry details p { padding: 8px 0; color: var(--muted); }
-.experience-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
-}
-.experience-row p { margin: 2px 0; font-size: var(--font-description); }
-.project { display: flex; gap: 24px; padding: 20px 0; }
-.project-number { font-size: 14px; color: var(--muted); padding-top: 3px; }
-.project p { margin: 5px 0; }
-.tag { font-size: var(--font-small); color: var(--muted); }
-.contact-list { margin: 22px 0 0; }
-.contact-list > div {
-  display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
-  gap: 15px;
-  padding: 8px 0;
-}
-.contact-list dt { font-size: var(--font-contact); }
-.contact-list dd {
-  margin: 0;
-  color: var(--muted);
-  font-size: var(--font-contact);
-  overflow-wrap: anywhere;
-}
-footer {
-  border-top: 1px solid var(--line);
-  padding: 23px 0 35px;
-  font-size: var(--font-footer);
-  color: var(--muted);
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-footer a { text-decoration: none; }
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 16px;
-  background: var(--paper);
-  padding: 8px;
-  z-index: 2;
-}
-.skip-link:focus { top: 8px; }
-
-/* ==========================================================
-   5. RESEARCH PAGE
-   ========================================================== */
-.research-item {
-  display: grid;
-  grid-template-columns: var(--research-image-width) minmax(0, 1fr);
-  gap: var(--research-column-gap);
-  align-items: start;
-  margin-bottom: var(--research-item-gap);
-}
-.research-image img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 4px;
-  display: block;
-}
-.research-images { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
-.research-figure { display: block; margin: 0; padding: 0; width: 100%; }
-.research-figure img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 4px;
-}
-.research-figure figcaption {
-  margin-top: 6px;
-  font-size: var(--font-caption);
-  line-height: 1.5;
-  color: #999;
-  overflow-wrap: anywhere;
-}
-.research-content { min-width: 0; position: relative; }
-.research-content .category { margin-top: 0; }
-.research-content h2 {
-  font-size: var(--font-entry-title);
-  margin: 8px 0 16px;
-  line-height: 1.4;
-}
-.research-content ul { margin: 0; padding-left: 20px; }
-.research-content li { margin-bottom: 12px; line-height: 1.65; }
-.research-summary { font-size: var(--font-summary); margin: 6px 0; line-height: 1.7; }
-.research-details { margin-top: 2px; }
-.research-details-content { font-size: var(--font-description); padding-top: 2px; }
-.research-details-content ul { padding-left: 20px; margin: 0; }
-.research-details-content li { margin-bottom: 12px; line-height: 1.7; }
-
-/* ==========================================================
-   6. PROJECTS PAGE
-   ========================================================== */
-.section.project-item {
-  display: grid;
-  grid-template-columns: var(--project-image-width) minmax(0, 1fr);
-  gap: var(--project-column-gap);
-  align-items: start;
-  padding: 0 0 var(--project-item-gap);
-  margin: 0 0 var(--project-item-gap);
-  border-bottom: 1px solid rgba(150, 150, 150, .2);
-}
-.project-figure { margin: 0; padding: 0; min-width: 0; }
-.project-figure img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 4px;
-}
-.project-figure figcaption {
-  margin-top: 5px;
-  font-size: var(--font-caption);
-  line-height: 1.4;
-  color: #999;
-  overflow-wrap: anywhere;
-}
-.project-content { min-width: 0; position: relative; }
-.project-content .category { margin: 0 0 5px; }
-.project-content h2 {
-  font-size: var(--font-entry-title);
-  margin: 0 0 7px;
-  line-height: 1.35;
-}
-.project-summary { font-size: var(--font-summary); margin: 0; line-height: 1.55; }
-.project-details { margin-top: 5px; }
-.project-details-content { font-size: var(--font-description); padding-top: 7px; }
-.project-details-content ul { margin: 0; padding-left: 18px; }
-.project-details-content li { margin: 0 0 7px; line-height: 1.55; }
-
-/* ==========================================================
-   7. SHARED RESEARCH / PROJECT DROPDOWNS
-   ========================================================== */
-.research-details summary, .project-details summary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  list-style: none;
-  padding: 2px 0;
-  font-size: var(--font-dropdown);
-  font-weight: 500;
-  color: var(--dropdown-color);
-}
-.project-details summary { gap: 6px; }
-.research-details summary::-webkit-details-marker,
-.project-details summary::-webkit-details-marker { display: none; }
-.research-details summary::after, .project-details summary::after {
-  content: "⌄";
-  font-size: 1.2em;
-  line-height: 1;
-  transition: transform .2s ease;
-}
-.research-details[open] summary::after,
-.project-details[open] summary::after { transform: rotate(180deg); }
-.research-details .label-open, .project-details .label-open { display: none; }
-.research-details[open] .label-closed,
-.project-details[open] .label-closed { display: none; }
-.research-details[open] .label-open,
-.project-details[open] .label-open { display: inline; }
-
-/* ==========================================================
-   8. MOBILE LAYOUT
-   ========================================================== */
-@media (max-width: 700px) {
-  :root {
-    --page-side-padding: 24px;
-    --header-padding-y: 22px;
-    --intro-padding-top: 36px;
-    --intro-padding-bottom: 36px;
-    --intro-column-gap: 24px;
-    --research-column-gap: 20px;
-    --project-column-gap: 12px;
-    --project-item-gap: 18px;
-  }
-  .site-header { align-items: flex-start; flex-direction: column; gap: 13px; }
-  nav { gap: 22px; }
-  .intro { grid-template-columns: minmax(0, 1fr); }
-  .profile { padding-top: 0; max-width: 190px; }
-  .portrait-placeholder { aspect-ratio: 1; }
-  .desktop-break { display: none; }
-  .section-heading { align-items: flex-start; }
-  .section-note { font-size: var(--font-small); }
-  .experience-row { flex-direction: column; gap: 2px; }
-  .contact-list > div { grid-template-columns: 110px minmax(0, 1fr); }
-  .project { gap: 15px; }
-  .research-item, .section.research-item, .section.project-item { grid-template-columns: 1fr; }
-  .research-images, .research-image { max-width: 320px; }
-  .project-figure { max-width: 300px; }
-  .section.project-item { padding-bottom: var(--project-item-gap); }
-}
-
-/* ==========================================================
-   9. ACCESSIBILITY / PRINT
-   ========================================================== */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .research-details summary::after, .project-details summary::after { transition: none; }
-}
-@media print {
-  body { background: #fff; color: #252c30; font-size: 11pt; }
-  .page { max-width: none; padding: 0; }
-  .site-header nav, .portrait-placeholder, footer a, .skip-link { display: none; }
-  .intro { grid-template-columns: 1fr; padding: 20px 0; }
-  .profile { padding: 0; }
-  .section { padding: 16px 0; }
-  details { display: block; }
-  article { break-inside: avoid; }
-  a, a:hover { color: inherit; }
-}
-
-
-/*added styl*/
-
-
-/* Refined link interaction */
-a:hover,
-.research-details summary:hover,
-.project-details summary:hover {
-  color: var(--gold);
-}
-
-/* Emerald dropdown links */
-.research-details summary,
-.project-details summary {
+.button:hover, nav .button:hover {
+  background: var(--background);
   color: var(--accent);
+  text-decoration: none;
 }
 
-/* Fine section dividers */
+.page-title, .intro { padding-block: clamp(3rem, 7vw, 6rem) clamp(2rem, 4vw, 3.5rem); }
+.page-title p { margin-top: 1.5rem; }
+
+.eyebrow, .category {
+  color: var(--muted);
+  font-size: .875rem;
+  text-transform: uppercase;
+}
+.eyebrow { margin-bottom: clamp(1.5rem, 3vw, 2.75rem); }
+.category { margin-bottom: .75rem; }
+.lead { max-width: 39rem; font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.4; margin-top: clamp(1.5rem, 4vw, 3.25rem); }
+.intro-links { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 1.5rem; }
+.interests ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: .75rem 2rem; margin: 0; padding: 0; list-style: none; }
+.background, .contact {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1fr);
+  gap: 1.5rem clamp(2rem, 6vw, 6rem);
+}
+.background h2, .contact h2 { font-size: clamp(2.25rem, 5vw, 4.75rem); letter-spacing: -.06em; }
+.profile { max-width: 17rem; margin-top: 1.5rem; }
+.profile-photo { width: 100%; filter: grayscale(1); }
+.contact > p, .contact-list { grid-column: 2; }
+.contact > h2 { grid-row: span 2; }
+.affiliation-logos { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+.affiliation-logos { margin-top: 1rem; }
+.affiliation-logos img, .university-logo { width: 3.5rem; height: 2.5rem; object-fit: contain; filter: grayscale(1); }
+
 .section {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
+  padding-block: clamp(2rem, 5vw, 4.5rem);
 }
 
-/* Antique gold category labels */
-.category,
-.eyebrow {
-  color: var(--gold);
+.section > h2 { margin-bottom: 1rem; }
+.contact-list { margin: 1rem 0 0; }
+.contact-list > div { display: flex; flex-wrap: wrap; gap: 0 1rem; padding-block: .4rem; }
+.contact-list dt { flex: 0 0 12rem; font-weight: 600; }
+.contact-list dd { margin: 0; overflow-wrap: anywhere; }
+
+.group-title {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--accent);
+  font-size: .875rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
+.research-item, .project-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  align-items: start;
+}
 
-/* ============================
-   COURSES — UNIVERSITY SHEET
-   ============================ */
+.research-images { display: grid; gap: 1rem; }
+.research-figure img, .project-figure img { width: 100%; border-radius: .6rem; background: var(--surface); }
+.research-content, .project-content { padding-block: clamp(0rem, 2vw, 1.75rem); }
+figcaption { margin-top: .35rem; color: var(--muted); font-size: .875rem; }
+.research-content h3, .project-content h3 { font-size: clamp(1.55rem, 3vw, 2.7rem); }
+.research-summary, .project-summary { margin-top: .75rem; }
+
+details { margin-top: 1rem; }
+summary {
+  color: var(--accent);
+  cursor: pointer;
+  width: fit-content;
+  padding-block: .35rem;
+  text-decoration: underline;
+  text-underline-offset: .22em;
+}
+details .label-open, details[open] .label-closed { display: none; }
+details[open] .label-open { display: inline; }
+details ul { padding-inline-start: 1.25rem; margin-block: .75rem 0; }
+details li + li { margin-top: .65rem; }
+
+.resume-row {
+  display: grid;
+  grid-template-columns: minmax(0, .4fr) minmax(0, 1fr);
+  gap: .65rem 2rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.resume-row h3 { font-size: 1.25rem; }
+.resume-date { margin-top: .3rem; color: var(--muted); font-size: .875rem; }
+.resume-role { margin-top: .3rem; }
+.resume-detail, .muted { color: var(--muted); }
+.resume-detail { margin-top: .3rem; }
 
 .courses-layout {
   display: grid;
-  grid-template-columns:
-    var(--courses-left-width)
-    minmax(0, 1fr);
-  gap: var(--courses-column-gap);
-  align-items: start;
+  grid-template-columns: minmax(0, .55fr) minmax(0, 1fr);
+  gap: 1.5rem 3rem;
+}
+.courses-university h3, .course-group h3 { margin-block: .5rem; }
+.course-group + .course-group { margin-top: 1.5rem; }
+.course-line { display: flex; gap: .75rem; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+.course-code { color: var(--muted); white-space: nowrap; }
+.entry p + h3 { margin-top: 1rem; }
+.entry h3 + p { margin-top: .25rem; }
+
+footer { border-top: 1px solid var(--border); color: var(--muted); font-size: .875rem; }
+.skip-link { position: absolute; left: 1rem; top: -5rem; background: var(--background); padding: .5rem; }
+.skip-link:focus { top: .5rem; }
+
+@media (max-width: 44rem) {
+  .background, .contact, .research-item, .project-item, .courses-layout { grid-template-columns: 1fr; }
+  .contact > p, .contact-list { grid-column: auto; }
+  .contact > h2 { grid-row: auto; }
+  .contact { gap: 1rem; }
+  .research-images, .project-figure { max-width: 28rem; }
 }
 
-/* University identity */
-.courses-university {
-  text-align: center;
-  padding-top: 20px;
+@media (max-width: 33rem) {
+  .resume-row { grid-template-columns: 1fr; }
 }
 
-.university-logo {
-  display: block;
-  width: var(--university-logo-width);
-  height: auto;
-  margin: 0 auto 15px;
-  object-fit: contain;
+@media print {
+  .site-header, footer, .skip-link { display: none; }
+  .page { max-width: none; padding: 0; }
+  .section, .page-title { padding-block: 1rem; }
+  .resume-row { break-inside: avoid; }
 }
-
-.courses-university h2 {
-  font-size: var(--font-entry-title);
-  margin: 0 0 5px;
-}
-
-.courses-university p {
-  font-size: var(--font-small);
-  color: var(--muted);
-  margin: 0;
-}
-
-/* Right column */
-.courses-catalog {
-  min-width: 0;
-}
-
-.course-group {
-  border-top: 1px solid var(--line);
-  padding-top: 14px;
-  margin-bottom: var(--course-group-gap);
-}
-
-.course-group h2 {
-  font-size: var(--font-section-title);
-  color: var(--ink);
-  margin: 0 0 14px;
-}
-
-/* Course rows */
-.course-line {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: var(--course-row-gap);
-  font-size: var(--font-body);
-}
-
-.course-code {
-  color: var(--muted);
-  font-size: var(--font-small);
-  white-space: nowrap;
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .courses-layout {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .courses-university {
-    padding-top: 0;
-  }
-
-  .university-logo {
-    width: 75px;
-  }
-}
-
-
-
-/* ==================================
-   RESUME PAGE
-   ================================== */
-
-:root {
-  --resume-row-gap: 18px;
-  --resume-date-width: 145px;
-  --resume-title-size: 15px;
-  --resume-role-size: 13px;
-  --resume-detail-size: 12px;
-}
-
-/* Section headings */
-.resume-section h2 {
-  font-size: var(--font-section-title);
-  margin-bottom: 12px;
-}
-
-/* Resume entries */
-.resume-entry {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 1fr)
-    var(--resume-date-width);
-  gap: 20px;
-  align-items: start;
-  padding: var(--resume-row-gap) 0;
-}
-
-.resume-entry + .resume-entry {
-  border-top: 1px solid var(--line);
-}
-
-.resume-entry h3 {
-  font-size: var(--resume-title-size);
-  font-weight: 500;
-  margin: 0 0 4px;
-  color: var(--ink);
-}
-
-.resume-role {
-  font-size: var(--resume-role-size);
-  color: var(--accent);
-  margin: 0 0 5px;
-}
-
-.resume-detail {
-  font-size: var(--resume-detail-size);
-  color: var(--muted);
-  line-height: 1.6;
-  margin: 0 0 4px;
-}
-
-.resume-date {
-  font-size: var(--font-small);
-  color: var(--muted);
-  text-align: right;
-  white-space: nowrap;
-}
-
-/* Technical skills */
-.resume-skills p {
-  font-size: var(--resume-detail-size);
-  color: var(--muted);
-  margin: 8px 0;
-}
-
-.resume-skills strong {
-  color: var(--ink);
-  font-weight: 500;
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .resume-entry {
-    grid-template-columns: 1fr;
-    gap: 5px;
-  }
-
-  .resume-date {
-    text-align: left;
-    white-space: normal;
-  }
-}
-
-
-
-
