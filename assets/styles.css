@@ -3,22 +3,28 @@
    Edit values in :root to control the whole site.
    ========================================================== */
 :root {
-  color-scheme: dark;
+   color-scheme: light;
 
-  /* Colors */
-   --paper: #101D19;          /* Main website background */
-   --ink: #B8B2A5;            /* Main text - warm ivory */
-   --muted: #98A69B;          /* Secondary text */
-   --accent: #789F89;         /* Links, navigation, highlights */
-   --accent-hover: #A0B8A4;   /* Links when hovered */
-   --line: #304137;           /* Horizontal divider lines */
-   --dropdown-color: #789F89; /* Read more / Show less */
-   --gold: #B6A076;
+  /* Color palette */
+  --paper: #ffffff;
+  --ink: #222222;
+  --muted: #666666;
+  --accent: #222222;
+  --accent-hover: #777777;
+  --line: #dddddd;
+
+  /* Dropdown */
+  --dropdown-color: #555555;
+
+  /* Introduction */
+  --lead-background: #ffffff;
+  --lead-text: #333333;
+  --lead-border: #dddddd;
    
-   /* Introduction highlight box */
+   /* Introduction highlight box 
    --lead-background: #164633;
    --lead-text: #A8B8AA;
-   --lead-border: #B6A076;
+   --lead-border: #B6A076;*/
 
   /* Typography — change sizes here */
   --font-name: 38px;           /* Homepage main name */
